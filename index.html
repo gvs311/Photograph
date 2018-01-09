@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>index</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<!--
+	<script src="jquery-3.2.1.js"></script>
+	-->
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous"></script>
+	<script src="jsforindex.js"></script>
+	<link rel="stylesheet" href="styler.css">
+	</head>
+	<body>
+	<!-- <nav class="navbar bg-primary navbar-expand-md fixed-top"> -->
+			<div class="bg-primary fized-top">
+				<div class="row">
+					<div class="col-lg-1"></div><!-- to keep a space before navigation-->
+					<div class="col-lg-7 flex-row">
+						<nav aria-label="breadcrumb" role="navigation" class="float-left align-items-center">
+					  		<ul class="breadcrumb align-items-center list-inline">
+								<li class="breadcrumb-item list-inline-item" aria-current="page"><a href='#'>Home</a></li>
+								<li class="breadcrumb-item list-inline-item" aria-current="page"><a href='#'>Current Page</a></li><!-- replace current later-->
+					  		</ul>
+						</nav>
+					</div>
+					<div class="col-lg-3 text-right">
+						<button type="button" class="btn btn-primary text-white float-right" data-toggle="modal" data-target="#uploader">Upload</button>
+					</div>
+					<div class="colg-lg-1"></div><!-- to keep a space after upload button-->
+				</div>
+			</div>
+		
+
+	
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-4 folder-border" >
+				<a href="#collapseNewFolder" class="btn" data-target="#collapseNewFolder" data-toggle="collapse" role="button" aria-controls="collapseNewFolder">New Folder</a>
+				<div class="collapse" id="collapseNewFolder">
+					<form>
+						<div class="form-group">
+							<label class="form-control-label">Name:</label>
+							<input type="text" id="nameofNewFile" class="form-control">
+						</div>
+						<button type="button" class="btn btn-primary text-white" id="createNewFolder">Create</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-8 folder-border" id="picture">
+				<ul id="unorderList">
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- start of collapsable item for new folder-->
+	
+	<!-- end of collapsable item for new folder-->
+
+
+	<!--start of modal to upload a new file-->
+	<div class="modal " id="uploader" tabindex="-1" role="dialog" aria-labelledby="upload-form" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+				<h5 class="modal-title">Upload New Files</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="close">
+					<span aria-hidden="true">&times</span>
+				</button>
+				</div> 
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label class="form-control-label">Select a file:</label>
+							<input type="file" id="fileHolder" class="form-control">
+						</div>
+						<button type="button" class="btn btn-primary text-white" id="uploadFileFromInput">Upload</button>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div> 
+	<!-- end of modal to upload a file-->
+	
+	
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	</body>
+</html>
